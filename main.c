@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 var_t var = {NULL, NULL, NULL, 0};
 
 /**
