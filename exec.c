@@ -5,7 +5,7 @@
  *
  * Return: EXIT_SUCCESS on success, respective error code on failure.
  */
-int run_monty(FILE *index)
+int exec(FILE *index)
 {
 	stack_t *stack = NULL;
 	char *c_line = NULL;
@@ -15,7 +15,7 @@ int run_monty(FILE *index)
 
 	if (start_stack(&stack) == EXIT_FAILURE)
 		return (EXIT_FAILURE);
-	while (getline(&c_line, &lennth, index) != -1)
+	while (getline(&c_line, &lenth, index) != -1)
 	{
 		linenum++;
 		operation_code_tokens = sep_string(c_line, DELIMETER);
@@ -59,6 +59,6 @@ int run_monty(FILE *index)
 		free(c_line);
 		return (err_wmemory());
 	}
-	free(C_line);
+	free(c_line);
 	return (exit_st);
 }

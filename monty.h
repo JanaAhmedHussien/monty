@@ -65,5 +65,9 @@ int start_stack(stack_t **stack);
 int check_delim(char *l, char *delim);
 char **sep_string(char *string, char *delimeter);
 void (*total_fun(char *functions))(stack_t**, unsigned int);
+<<<<<<< HEAD
 
+=======
+int exec(FILE *index);
+>>>>>>> b8aac4544076915febb3782f5452629a4f2d03c9
 #endif
