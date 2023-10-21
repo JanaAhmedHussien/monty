@@ -13,14 +13,16 @@ return (l);
 }
 /**
  * total_fun - make them all together
- * @functions: pointer
- * Return: pointer
+ * @opcode: The opcode to match.
+ *
+ * Return: A pointer to the corresponding function.
  */
 void (*total_fun(char *opcode))(stack_t**, unsigned int)
 {
 instruction_t func[] = {
 {"push", _push},
 {"pall", _pall},
+{"pint", monty_pint},
 };
 int x;
 for (x = 0; func[x].opcode; x++)

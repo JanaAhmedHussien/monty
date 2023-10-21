@@ -1,5 +1,4 @@
 #include "monty.h"
-#include <string.h>
 
 /**
  * exec - Primary function to execute a Monty bytecodes script.
