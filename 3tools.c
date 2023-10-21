@@ -23,6 +23,7 @@ instruction_t func[] = {
 {"push", _push},
 {"pall", _pall},
 {"pint", _pint},
+{"pop", _pop},
 };
 int x;
 for (x = 0; func[x].opcode; x++)
