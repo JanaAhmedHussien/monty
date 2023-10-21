@@ -1,4 +1,5 @@
 #include "monty.h"
+#include <string.h>
 /**
  * exec - Primary function to execute a Monty bytecodes script.
  * @index: File descriptor for an open Monty bytecodes script.

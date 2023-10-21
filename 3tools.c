@@ -41,5 +41,3 @@ int sserror(unsigned int nline, char *fun)
 fprintf(stderr, "L%u: can't %s, stack too short\n", nline, fun);
 return (EXIT_FAILURE);
 }
-int sserror(unsigned int nline, char *fun);
-void (*total_fun(char *functions))(stack_t**, unsigned int);
