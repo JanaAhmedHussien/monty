@@ -4,7 +4,7 @@
  *
  * Return: (EXIT_FAILURE) always.
  */
-int perror(unsigned int linenum)
+int p_err(unsigned int linenum)
 {
 	fprintf(stderr, "L%d: can't pint, stack empty\n", linenum);
 	return (EXIT_FAILURE);

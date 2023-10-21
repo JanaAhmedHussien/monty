@@ -73,7 +73,7 @@ void (*total_fun(char *functions))(stack_t**, unsigned int);
 int exec(FILE *index);
 
 void _pint(stack_t **stack, unsigned int linenum);
-int perror(unsigned int linenum);
+int p_err(unsigned int linenum);
 void _pop(stack_t **stack, unsigned int linenum);
 int poerr(unsigned int linenum);
 

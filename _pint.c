@@ -8,7 +8,7 @@ void _pint(stack_t **stack, unsigned int linenum)
 {
     if ((*stack)->next == NULL)
 {
-token_err(perror(linenum));
+token_err(p_err(linenum));
 return;
 }
 
