@@ -3,64 +3,58 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <sys/types.h>
 #include <unistd.h>
-#include <fcntl.h>
-#include <string.h>
-#include <ctype.h>
-
+#define MY_STACK 0
+#define MY_QUEUE 1
+#define DELIMETER " \n\t\a\b"
+extern char **operation_code_tokens;
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
- * @x: integer
+ * @n: integer
  * @prev: points to the previous element of the stack (or queue)
  * @next: points to the next element of the stack (or queue)
  *
  * Description: doubly linked list node structure
- * for stack, queues, LIFO, FIFO Holberton project
+ * for stack, queues, LIFO, FIFO
  */
 typedef struct stack_s
 {
-	int x;
-	struct stack_s *prev;
-	struct stack_s *next;
+        int n;
+        struct stack_s *prev;
+        struct stack_s *next;
 } stack_t;
-
 /**
- * struct opcode_s - opcode and its function
+ * struct instruction_s - opcode and its function
  * @opcode: the opcode
  * @f: function to handle the opcode
  *
  * Description: opcode and its function
- * for stack, queues, LIFO, FIFO Holberton project
+ * for stack, queues, LIFO, FIFO
  */
-typedef struct opcode_s
+typedef struct instruction_s
 {
-	char *opcode;
-	void (*f)(stack_t **stack, unsigned int line_number);
-} opcode_t;
+        char *opcode;
+        void (*f)(stack_t **stack, unsigned int line_number);
+} instruction_t;
 
-/**
- * struct var_s - variables -args, file, line content
- * @arg: value
- * @file: pointer to monty file
- * @content: line content
- * @lifi: flag change stack <-> queue
- * Description: carries values through the program
- */
-typedef struct var_s
-{
-	char *arg;
-	FILE *file;
-	char *content;
-	int lifi;
-}  var_t;
-extern var_t var;
-
-void add_n(stack_t **first, int x);
-void add_q(stack_t **first, int x);
-int exe(char *index, stack_t **stack, unsigned int count, FILE *file);
-void free_s(stack_t *first);
-void _pall(stack_t **first, unsigned int count);
-void _push(stack_t **first, unsigned int count);
-
+/*main code*/
+void _pall(stack_t **stack, unsigned int nline);
+void _push(stack_t **stack, unsigned int nline);
+/*file monty*/
+int winstr(char *operation_code, unsigned int nline);
+int warg(unsigned int nline);
+int ferr(char *finput);
+int err_wmemory(void);
+int err(void);
+/*tools file*/
+int nbase(unsigned int n, unsigned int base);
+void buffer_nbase(unsigned int n, unsigned  int base, char *buffer, int size);
+unsigned int absolute(int j);
+char *_integer(int n);
+unsigned int larr(void);
+int my_stat((stack_t *stack);
+void token_err(int coderr);
+int _wordc(char *string, char *delimeter);
+int _wordl(char *string, char *delimeter);
+char *next_w(char *string, char *delimeter);
 #endif
