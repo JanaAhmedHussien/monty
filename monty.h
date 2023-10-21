@@ -4,6 +4,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <string.h>
+
 #define MY_STACK 0
 #define MY_QUEUE 1
 #define DELIMETER " \n\t\a\b"
