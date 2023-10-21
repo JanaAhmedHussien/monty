@@ -42,7 +42,7 @@ char **w = NULL;
 int word_count, lword, num, x = 0;
 if (string == NULL || !*string)
 return (NULL);
-word_ = _wordc(string, delimeter);
+word_count = _wordc(string, delimeter);
 if (word_count == 0)
 return (NULL);
 w = malloc((word_count + 1) * sizeof(char *));

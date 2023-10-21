@@ -7,9 +7,9 @@ void token_err(int coderr)
 {
 int l = 0, j = 0;
 char *string_e = NULL;
-char ** ntoken = NULL;
+char **ntoken = NULL;
 l = larr();
-ntoken = malloc(sizeof(char*) * (l + 2));
+ntoken = malloc(sizeof(char *) * (l + 2));
 if (!operation_code_tokens)
 {
 err_wmemory();
@@ -20,14 +20,14 @@ while (j < l)
 ntoken[j] = operation_code_tokens[j];
 j++;
 }
-estring = _integer(coderr);
-if (!estring)
+string_e = _integer(coderr);
+if (!string_e)
 {
 free(ntoken);
 err_wmemory();
 return;
 }
-ntoken[j++] = estring;
+ntoken[j++] = string_e;
 ntoken[j] = NULL;
 free(operation_code_tokens);
 operation_code_tokens = ntoken;
@@ -37,11 +37,11 @@ operation_code_tokens = ntoken;
  * @stack: pointer
  * Return: 0 for stack or 1 for queue
  */
-int my_stat((stack_t *stack)
+int my_stat(stack_t *stack)
 {
-    if (stack->n == MY_STACK)
-        return (MY_STACK);
-    else if (stack->n == MY_QUEUE)
-        return (MY_QUEUE);
-    return (2);
+if (stack->n == MY_STACK)
+return (MY_STACK);
+else if (stack->n == MY_QUEUE)
+return (MY_QUEUE);
+return (2);
 }

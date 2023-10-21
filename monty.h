@@ -19,9 +19,9 @@ extern char **operation_code_tokens;
  */
 typedef struct stack_s
 {
-        int n;
-        struct stack_s *prev;
-        struct stack_s *next;
+int n;
+struct stack_s *prev;
+struct stack_s *next;
 } stack_t;
 /**
  * struct instruction_s - opcode and its function
@@ -33,8 +33,8 @@ typedef struct stack_s
  */
 typedef struct instruction_s
 {
-        char *opcode;
-        void (*f)(stack_t **stack, unsigned int line_number);
+char *opcode;
+void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
 /*main code*/
@@ -52,9 +52,15 @@ void buffer_nbase(unsigned int n, unsigned  int base, char *buffer, int size);
 unsigned int absolute(int j);
 char *_integer(int n);
 unsigned int larr(void);
-int my_stat((stack_t *stack);
+int my_stat(stack_t *stack);
 void token_err(int coderr);
 int _wordc(char *string, char *delimeter);
 int _wordl(char *string, char *delimeter);
 char *next_w(char *string, char *delimeter);
+int _delimeter(char charct, char *delimeter);
+void _free(void);
+void _frees(stack_t **stack);
+int start_stack(stack_t **stack);
+int check_delim(char *l, char *delim);
+char **sep_string(char *string, char *delimeter);
 #endif

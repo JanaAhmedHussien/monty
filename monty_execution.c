@@ -51,7 +51,8 @@ free(*stack);
 }
 /**
  * start_stack - start my stack
- * @stack: pointer
+ * @stack: pointer for the function
+ * Return: function or fail
  */
 int start_stack(stack_t **stack)
 {
@@ -65,4 +66,3 @@ x->next = NULL;
 *stack = x;
 return (EXIT_SUCCESS);
 }
-

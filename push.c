@@ -2,7 +2,7 @@
 /**
  * _push - push value to the stack
  * @stack: ptr to the top node
- * nline: line number
+ * @nline: line number
  */
 void _push(stack_t **stack, unsigned int nline)
 {
