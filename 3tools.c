@@ -22,6 +22,7 @@ void (*total_fun(char *opcode))(stack_t**, unsigned int)
 instruction_t func[] = {
 {"push", _push},
 {"pall", _pall},
+{"pint", _pint},
 };
 int x;
 for (x = 0; func[x].opcode; x++)
@@ -42,3 +43,15 @@ int sserror(unsigned int nline, char *fun)
 fprintf(stderr, "L%u: can't %s, stack too short\n", nline, fun);
 return (EXIT_FAILURE);
 }
+/**
+ * perror - Prints pint error messages for empty stacks.
+ * @linenum: Line number in Monty bytecodes file where error occurred.
+ *
+ * Return: (EXIT_FAILURE) always.
+ */
+int perror(unsigned int linenum)
+{
+    fprintf(stderr, "L%d: can't pint, stack empty\n", linenum);
+    return (EXIT_FAILURE);
+}
+

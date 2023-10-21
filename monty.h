@@ -72,4 +72,5 @@ char **sep_string(char *string, char *delimeter);
 void (*total_fun(char *functions))(stack_t**, unsigned int);
 int exec(FILE *index);
 void _pint(stack_t **stack, unsigned int linenum);
+int perror(unsigned int linenum);
 #endif
