@@ -2,6 +2,7 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
+char **operation_code_tokens = NULL;
 /**
 * main - monty code interpreter
 * @argc: number of arguments
@@ -10,7 +11,6 @@
 */
 int main(int argc, char **argv)
 {
-char **operation_code_tokens = NULL;
 FILE *my_scr = NULL;
 int ecode = EXIT_SUCCESS;
 if (argc != 2)
