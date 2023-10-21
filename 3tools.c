@@ -16,16 +16,16 @@ return (l);
  * @functions: pointer
  * Return: pointer
  */
-void (*total_fun(char *functions))(stack_t**, unsigned int)
+void (*total_fun(char *opcode))(stack_t**, unsigned int)
 {
 instruction_t func[] = {
 {"push", _push},
 {"pall", _pall},
 };
 int x;
-for (x = 0; func[x].functions; x++)
+for (x = 0; func[x].opcode; x++)
 {
-if (strcmp(functions, func[x].functions) == 0)
+if (strcmp(opcode, func[x].opcode) == 0)
 return (func[x].f);
 }
 return (NULL);
