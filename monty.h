@@ -46,6 +46,7 @@ int warg(unsigned int nline);
 int ferr(char *finput);
 int err_wmemory(void);
 int err(void);
+int sserror(unsigned int nline, char *fun);
 /*tools file*/
 int nbase(unsigned int n, unsigned int base);
 void buffer_nbase(unsigned int n, unsigned  int base, char *buffer, int size);
@@ -63,4 +64,5 @@ void _frees(stack_t **stack);
 int start_stack(stack_t **stack);
 int check_delim(char *l, char *delim);
 char **sep_string(char *string, char *delimeter);
+void (*total_fun(char *functions))(stack_t**, unsigned int);
 #endif
