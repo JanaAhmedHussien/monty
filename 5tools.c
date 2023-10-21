@@ -1,3 +1,5 @@
+#include "monty.h"
+#include <stdio.h>
 /**
  * perror - Prints pint error messages for empty stacks.
  * @linenum: Line number in Monty bytecodes file where error occurred.
