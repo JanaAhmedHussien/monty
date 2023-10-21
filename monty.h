@@ -79,5 +79,7 @@ int poerr(unsigned int linenum);
 int st_err(unsigned int linenum, char *operant);
 void _swap(stack_t **stack, unsigned int linenum);
 void _add(stack_t **stack, unsigned int linenum);
+void _nop(stack_t **stack, unsigned int linenum);
+
 
 #endif
