@@ -26,7 +26,7 @@ int x;
 for (x = 0; func[x].functions; x++)
 {
 if (strcmp(functions, func[x].functions) == 0)
-return (functions[x].f);
+return (func[x].f);
 }
 return (NULL);
 }
