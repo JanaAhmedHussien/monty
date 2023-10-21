@@ -22,7 +22,6 @@ void (*total_fun(char *opcode))(stack_t**, unsigned int)
 instruction_t func[] = {
 {"push", _push},
 {"pall", _pall},
-{"pint", _pint}
 };
 int x;
 for (x = 0; func[x].opcode; x++)
