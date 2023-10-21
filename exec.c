@@ -5,7 +5,7 @@
  *
  * Return: EXIT_SUCCESS on success, respective error code on failure.
  */
-int run_monty(FILE *index)
+int exec(FILE *index)
 {
 	stack_t *stack = NULL;
 	char *c_line = NULL;
