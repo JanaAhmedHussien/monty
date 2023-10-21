@@ -76,5 +76,7 @@ void _pint(stack_t **stack, unsigned int linenum);
 int p_err(unsigned int linenum);
 void _pop(stack_t **stack, unsigned int linenum);
 int poerr(unsigned int linenum);
+int st_err(unsigned int linenum, char *operant);
+void _swap(stack_t **stack, unsigned int linenum);
 
 #endif
