@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include "monty.h"
 /**
  * _integer - getting integer
  * @n: number to str
