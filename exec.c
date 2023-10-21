@@ -18,10 +18,10 @@ int run_monty(FILE *index)
 	while (getline(&c_line, &lennth, index) != -1)
 	{
 		linenum++;
-		operation_code_tokens = sep_string(c_line, DELIMS);
+		operation_code_tokens = sep_string(c_line, DELIMETER);
 		if (operation_code_tokens == NULL)
 		{
-			if (check_delim(c_line, DELIMS))
+			if (check_delim(c_line, DELIMETER))
 				continue;
 			_frees(&stack);
 			return (err_wmemory());
