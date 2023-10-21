@@ -31,7 +31,7 @@ int exec(FILE *index)
 			_free();
 			continue;
 		}
-		_op = total_func(operation_code_tokens[0]);
+		_op = total_fun(operation_code_tokens[0]);
 
 		if (operation_code_tokens == NULL)
 			{
