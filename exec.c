@@ -16,7 +16,8 @@ int exec(FILE *index)
 
 	if (start_stack(&stack) == EXIT_FAILURE)
 		return (EXIT_FAILURE);
-	while (getline(&c_line, &lenth, index) != -1)
+	double j = getline(&c_line, &lenth, index);
+	while (j != -1)
 	{
 		linenum++;
 		operation_code_tokens = sep_string(c_line, DELIMETER);
