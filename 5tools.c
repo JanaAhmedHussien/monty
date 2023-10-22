@@ -37,12 +37,12 @@ int st_err(unsigned int linenum, char *operant)
 	return (EXIT_FAILURE);
 }
 /**
- * d_err - Prints division error messages for division by 0.
+ * division_err - Prints division error messages for division by 0.
  * @linenum Line number in Monty bytecodes file where error occurred.
  *
  * Return: (EXIT_FAILURE) always.
  */
-int d_err(unsigned int linenum)
+int division_err(unsigned int linenum)
 {
 	fprintf(stderr, "L%u: division by zero\n", linenum);
 	return (EXIT_FAILURE);

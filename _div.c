@@ -12,13 +12,13 @@ void _div(stack_t **stack, unsigned int linenum)
 {
 	if ((*stack)->next == NULL || (*stack)->next->next == NULL)
 	{
-		token_err(st_err(line_number, "div"));
+		token_err(st_err(linenum, "div"));
 		return;
 	}
 
 	if ((*stack)->next->n == 0)
 	{
-		token_err(d_err(linenum));
+		token_err(division_err(linenum));
 		return;
 	}
 

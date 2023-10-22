@@ -80,6 +80,8 @@ int st_err(unsigned int linenum, char *operant);
 void _swap(stack_t **stack, unsigned int linenum);
 void _add(stack_t **stack, unsigned int linenum);
 void _nop(stack_t **stack, unsigned int linenum);
-
+void _div(stack_t **stack, unsigned int linenum);
+void _sub(stack_t **stack, unsigned int linenum);
+int division_err(unsigned int linenum);
 
 #endif
