@@ -28,6 +28,7 @@ instruction_t func[] = {
 {"add", _add},
 {"nop", _nop},
 {"sub", _sub},
+{"div", _div},
 };
 int x;
 for (x = 0; func[x].opcode; x++)
