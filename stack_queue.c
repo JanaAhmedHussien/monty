@@ -6,7 +6,7 @@
  */
 void _stack(stack_t **stack, unsigned int linenum)
 {
-	(*stack)->n = STACK;
+	(*stack)->n = MY_STACK;
 	(void)linenum;
 }
 
@@ -17,6 +17,6 @@ void _stack(stack_t **stack, unsigned int linenum)
  */
 void _queue(stack_t **stack, unsigned int linenum)
 {
-	(*stack)->n = QUEUE;
+	(*stack)->n = MY_QUEUE;
 	(void)linenum;
 }
