@@ -6,12 +6,12 @@
  */
 void _pstr(stack_t **stack, unsigned int linenum)
 {
-	stack_t *container = (*stack)->next;
+	stack_t *contain = (*stack)->next;
 
-	while (container && container->n != 0 && (container->n > 0 && container->n <= 127))
+	while (contain && contain->n != 0 && (contain->n > 0 && contain->n <= 127))
 	{
-		printf("%c", container->n);
-		container = container->next;
+		printf("%c", contain->n);
+		contain = contain->next;
 	}
 	printf("\n");
 
