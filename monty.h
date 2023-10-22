@@ -87,5 +87,6 @@ void _mul(stack_t **stack, unsigned int linenum);
 void _mod(stack_t **stack, unsigned int linenum);
 int ch_err(unsigned int linenum, char *sms);
 void _pchar(stack_t **stack, unsigned int linenum);
+void _pstr(stack_t **stack, unsigned int linenum);
 
 #endif
