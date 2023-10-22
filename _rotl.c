@@ -13,7 +13,6 @@ void _rotl(stack_t **stack, unsigned int linenum)
 
 	first = (*stack)->next;
 	last = (*stack)->next;
-	
 	while (last->next != NULL)
 		last = last->next;
 
