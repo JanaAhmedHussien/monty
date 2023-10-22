@@ -16,7 +16,7 @@ int exec(FILE *index)
 
 	if (start_stack(&stack) == EXIT_FAILURE)
 		return (EXIT_FAILURE);
-	j = getline(&c_line, &lenth, index);
+	int j = getline(&c_line, &lenth, index);
 	while (j != -1)
 	{
 		linenum++;
