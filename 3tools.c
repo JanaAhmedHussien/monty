@@ -35,6 +35,8 @@ instruction_t func[] = {
 {"pstr", _pstr},
 {"rotl", _rotl},
 {"rotr", _rotr},
+{"stack", _stack},
+{"queue", _queue},
 };
 int x;
 for (x = 0; func[x].opcode; x++)

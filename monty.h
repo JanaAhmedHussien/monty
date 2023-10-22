@@ -90,5 +90,7 @@ void _pchar(stack_t **stack, unsigned int linenum);
 void _pstr(stack_t **stack, unsigned int linenum);
 void _rotl(stack_t **stack, unsigned int linenum);
 void _rotr(stack_t **stack, unsigned int linenum);
+void _queue(stack_t **stack, unsigned int linenum);
+void _stack(stack_t **stack, unsigned int linenum);
 
 #endif
