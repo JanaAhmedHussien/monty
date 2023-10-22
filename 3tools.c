@@ -32,6 +32,7 @@ instruction_t func[] = {
 {"mul", _mul},
 {"mod", _mod},
 {"pchar", _pchar},
+{"pstr", _pstr},
 };
 int x;
 for (x = 0; func[x].opcode; x++)
